@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Porkbun Filter</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="popup.css">
+	<script src="popup.js"></script>
+</head>
+
+<body>
+
+	<header>
+		<div class="logo">
+			<img src="/icons/48.png" />
+			<h1>Porkbun Filter</h1>
+		</div>
+	</header>
+
+	<main>
+		<div id="search-prompt">
+			<div class="prompt-info">
+				<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+					stroke-linecap="round" stroke-linejoin="round">
+					<circle cx="12" cy="12" r="10" />
+					<line x1="12" y1="8" x2="12" y2="12" />
+					<line x1="12" y1="16" x2="12.01" y2="16" />
+				</svg>
+				<p>Perform a search first, then reopen this popup to use the filter.</p>
+			</div>
+			<form id="search-form">
+				<input type="text" id="search-input" placeholder="Search for domain..." required>
+				<button type="submit">Search</button>
+			</form>
+		</div>
+
+		<form id="filter-form">
+			<div class="price-inputs">
+				<div class="input-group">
+					<label for="max-purchase-price">Purchase</label>
+					<div class="input-wrapper">
+						<span>$</span>
+						<input type="number" id="max-purchase-price" name="max-purchase-price" value="30" step="1"
+							min="1">
+					</div>
+				</div>
+				<div class="input-group">
+					<label for="max-price">Renewal</label>
+					<div class="input-wrapper">
+						<span>$</span>
+						<input type="number" id="max-price" name="max-price" value="30" step="1" min="1">
+					</div>
+				</div>
+			</div>
+			<button type="submit" id="apply-btn">Apply Filter</button>
+		</form>
+	</main>
+
+	<footer>
+		<p>Contact <a href="mailto:code@rock.su?subject=Custom%20Browser%20Extension%20Request">code@rock.su</a> for
+			custom browser extensions, business automation solutions, and full-stack web development.</p>
+	</footer>
+
+</body>
+
+</html>
