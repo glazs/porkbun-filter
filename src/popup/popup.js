@@ -36,10 +36,9 @@ async function initPopup() {
 
 		const $maxPurchasePriceInput = $('#max-purchase-price')
 		const $maxRenewalPriceInput = $('#max-price')
-		const savedPurchasePrice = localStorage['porkbun-max-purchase-price']
-		const savedRenewalPrice = localStorage['porkbun-max-renewal-price']
-		if (savedPurchasePrice !== null) $maxPurchasePriceInput.value = savedPurchasePrice
-		if (savedRenewalPrice !== null) $maxRenewalPriceInput.value = savedRenewalPrice
+
+		$maxPurchasePriceInput.value = localStorage['porkbun-max-purchase-price'] || 30
+		$maxRenewalPriceInput.value = localStorage['porkbun-max-renewal-price'] || 30
 
 		$filterForm.addEventListener('submit', async (e) => {
 			e.preventDefault()
