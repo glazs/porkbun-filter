@@ -3,6 +3,8 @@ Porkbun Search Price Filter
 
 This UNOFFICIAL extension filters out domains at porkbun.com search results that are too expensive to purchase or renew. 
 
+![Screenshot](screenshot.png)
+
 Installation from marketplaces
 ------------------------------
 
